@@ -93,8 +93,37 @@ glimpse(script_lines_df)
 ```
 
 
+# Viewership
+
+In the graph below US viewers (millions) are represented per episode and per season. 
+
+```{r}
+episodes_df[complete.cases(episodes_df), ] %>% 
+ggplot(aes(x = id, y = us_viewers_in_millions)) +  
+  geom_line(col="yellow") + theme_bw() + theme(legend.position="right") +
+  labs(x="Episode", y="US viewers (millions)",  
+       title="US viewers (millions, per episode)") ->d1
+episodes_df[complete.cases(episodes_df), ] %>% group_by(season) %>% summarize(nr = sum(us_viewers_in_millions)) %>% ungroup() %>%
+ggplot(aes(x = season, y = nr)) +  
+  geom_line(col="green") + theme_bw() + theme(legend.position="right") +
+  labs(x="Season", y="US viewers (millions, total values per season)",  
+       title="US viewers (millions, per season)") -> d2
+grid.arrange(d1, d2, ncol=2)
+```
 
 
+Boxplot graph for US viewers/episode grouped by season.
+
+```{r warning=FALSE}
+episodes_df[complete.cases(episodes_df), ] %>% 
+ggplot(aes(x = reorder(season,season), y = us_viewers_in_millions, fill=season)) +  guides(fill=FALSE) +
+  geom_boxplot() + theme_bw() +  scale_fill_gradient(low = "yellow", high = "blue")+
+  labs(x="Season", y="US viewers (millions)",  fill="Season",
+       title="US viewers (millions, per episode)", subtitle="Grouped by season")
+```
 
 
+We've noticed a general decline in viewership. Older seasons appear to be the most popular, praised, and viewed. In truth, The Simpsons gained critical acclaim throughout its first nine or ten seasons, which are widely regarded as the show's "Golden Age," but has been criticized for a perceived deterioration in quality over time.
+
+To be fair, the recent availability of a variety of network channels and Internet streaming services has resulted in a systematic reduction in the number of TV viewers for many series, not just The Simpsons.
 
