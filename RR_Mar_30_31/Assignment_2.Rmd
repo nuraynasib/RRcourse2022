@@ -15,4 +15,29 @@ The family was conceived by *Groening* shortly before a solicitation for a serie
 
 Since its debut on December 17, 1989, 722 episodes of the show have been broadcast. It is the longest-running American animated series, longest-running American sitcom, and the longest-running American scripted primetime television series, both in terms of seasons and number of episodes. A feature-length film, The Simpsons Movie, was released in theaters worldwide on July 27, 2007, and grossed over $527 million, with a sequel in development as of 2018. The series has also spawned numerous comic book series, video games, books, and other related media, as well as a billion-dollar merchandising industry. The Simpsons is a joint production by Gracie Films and 20th Television. On March 3, 2021, the series was announced to have been renewed for seasons 33 and 34, which were later confirmed to have 22 episodes each, increasing the episode count from 706 to 750. Its thirty-third season premiered on September 26, 2021. Source: [Wikipedia](https://en.wikipedia.org/wiki/The_Simpsons)
 
+![](https://media.giphy.com/media/fBEDuhnVCiP16/giphy.gif) 
+
+### Explanatory Data Analysis
+
+```{r}
+library(caret)
+library(corrplot)
+library(readr)
+library(knitr)
+library(kableExtra)
+library(formattable)
+library(dplyr)
+library(tm)
+library(tidyr)
+library(wordcloud)
+library(ggplot2)
+library(gridExtra)
+library(grid)
+library(leaflet)
+library(randomForest)
+library(plotly)
+options(knitr.table.format = "html") 
+```
+
+
 
