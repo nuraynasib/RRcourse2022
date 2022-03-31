@@ -7,7 +7,7 @@ output:
     theme: united
 ---
 
-### The Simpsons
+# The Simpsons
 
 The Simpsons is an American animated sitcom created by *Matt Groening* for the Fox Broadcasting Company. The series is a satirical depiction of American life, epitomized by the Simpson family, which consists of *Homer, Marge, Bart, Lisa, and Maggie*. The show is set in the fictional town of Springfield and parodies American culture and society, television, and the human condition.
 
@@ -17,9 +17,9 @@ Since its debut on December 17, 1989, 722 episodes of the show have been broadca
 
 ![](https://media.giphy.com/media/fBEDuhnVCiP16/giphy.gif) 
 
-### Explanatory Data Analysis
+# Explanatory Data Analysis
 
-```{r}
+```{r, results='hide', message=FALSE, warning=FALSE}
 library(caret)
 library(corrplot)
 library(readr)
@@ -38,6 +38,63 @@ library(randomForest)
 library(plotly)
 options(knitr.table.format = "html") 
 ```
+
+
+```{r,input_data, message=FALSE,warning=FALSE}
+PATH="C:/Users/Nuray/Desktop/rr/RRcourse2022/RR_Mar_30_31/simpsons-by-the-data"
+characters_df <- read_csv(paste0(PATH,'/simpsons_characters.csv'))
+episodes_df <- read_csv(paste0(PATH,'/simpsons_episodes.csv'))
+locations_df <- read_csv(paste0(PATH,'/simpsons_locations.csv'))
+script_lines_df <- read_csv(paste0(PATH,'/simpsons_script_lines.csv'))
+```  
+
+
+# Data Summary {.tabset .tabset-fade .tabset-pills}
+
+
+We have 4 data files in Simpsons dataset, as following:
+
+* simpsons_characters.csv (`r nrow(characters_df)` rows, `r length(names(characters_df))` columns)  
+* simpsons_episodes.csv (`r nrow(episodes_df)` rows, `r length(names(episodes_df))` columns)  
+* simpsons_locations.csv (`r nrow(locations_df)` rows, `r length(names(locations_df))` columns)  
+* simpsons_script_lines.csv (`r nrow(script_lines_df)` rows, `r length(names(script_lines_df))` columns)  
+
+Let's see the first few rows of each data file and also glimpse these data files.
+
+
+## Characters
+
+```{r glimpse_characters}
+knitr::kable(head(characters_df,5),caption="Characters information (first 5 rows)")
+glimpse(characters_df)
+```
+
+## Episodes
+
+```{r glimpse_episodes}
+knitr::kable(head(episodes_df,5),caption="Episodes information (first 5 rows)")
+glimpse(episodes_df)
+```
+
+
+## Locations
+
+```{r glimpse_locations}
+knitr::kable(head(locations_df,5),caption="Locations information (first 5 rows)")
+glimpse(locations_df)
+```
+
+
+## Script lines
+
+```{r glimpse_script_lines}
+knitr::kable(head(script_lines_df,5),caption="Script lines details (first 5 rows)")
+glimpse(script_lines_df)
+```
+
+
+
+
 
 
 
