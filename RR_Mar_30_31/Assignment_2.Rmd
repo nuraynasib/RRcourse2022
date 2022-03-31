@@ -1,30 +1,18 @@
 ---
-title: "Assignment_2"
+title: "The Simpsons - Small Explanatory Data Analysis"
 author: "Nuray Nasib"
-date: "3/31/2022"
-output: html_document
+output: 
+  html_document:
+    toc: true
+    theme: united
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
+### The Simpsons
 
-## R Markdown
+The Simpsons is an American animated sitcom created by *Matt Groening* for the Fox Broadcasting Company. The series is a satirical depiction of American life, epitomized by the Simpson family, which consists of *Homer, Marge, Bart, Lisa, and Maggie*. The show is set in the fictional town of Springfield and parodies American culture and society, television, and the human condition.
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+The family was conceived by *Groening* shortly before a solicitation for a series of animated shorts with producer *James L. Brooks*. He created a dysfunctional family and named the characters after his own family members, substituting *Bart* for his own name; he thought Simpson was a funny name in that it sounded similar to "simpleton". The shorts became a part of *The Tracey Ullman Show* on April 19, 1987. After three seasons, the sketch was developed into a half-hour prime time show and became Fox's first series to land in the Top 30 ratings in a season (1989–1990).
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+Since its debut on December 17, 1989, 722 episodes of the show have been broadcast. It is the longest-running American animated series, longest-running American sitcom, and the longest-running American scripted primetime television series, both in terms of seasons and number of episodes. A feature-length film, The Simpsons Movie, was released in theaters worldwide on July 27, 2007, and grossed over $527 million, with a sequel in development as of 2018. The series has also spawned numerous comic book series, video games, books, and other related media, as well as a billion-dollar merchandising industry. The Simpsons is a joint production by Gracie Films and 20th Television. On March 3, 2021, the series was announced to have been renewed for seasons 33 and 34, which were later confirmed to have 22 episodes each, increasing the episode count from 706 to 750. Its thirty-third season premiered on September 26, 2021. Source: [Wikipedia](https://en.wikipedia.org/wiki/The_Simpsons)
 
-```{r cars}
-summary(cars)
-```
 
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
