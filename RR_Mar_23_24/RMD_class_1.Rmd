@@ -9,7 +9,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 library(reticulate)
 library(chron)
-#py_install("pandas")
+py_install("pandas") 
 ```
 
 ---
@@ -169,6 +169,7 @@ You can also use Python within the RMarkdown document like so:
 
 ```{python}
 import pandas
+#reticulate::
 flights = pandas.read_csv("../Data/flights.csv")
 flights = flights[flights['dest'] == "ORD"]
 flights = flights[['carrier', 'dep_delay', 'arr_delay']]
