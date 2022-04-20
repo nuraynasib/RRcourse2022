@@ -1,15 +1,34 @@
 ---
 title: "(R)Markdown"
 author: "Wojciech Hardy; Łukasz Nawaro"
-date: "3/23/2022"
-output: html_document
+date: "`r format(Sys.time(), '%d %B, %Y')`" #for automating the time
+output: 
+     html_document:
+       toc: true
+       toc_float: true
+       number_sections: true
+       toc_depth: 5 
+       theme: united #theme is coming from bootstrap.com? and prettydoc
+       highlight: tango
+       self_contained: true
+       code_folding: show
+params:
+  year: 2018
+  region: Europe
+  printcode: TRUE
+  data: file.csv
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+#knitr::opts_knit$set(base.dir = "Plots")
 library(reticulate)
 library(chron)
 #py_install("pandas")
+```
+
+```{r}
+params$year
 ```
 
 ---
@@ -74,7 +93,7 @@ Subscripts can be done like so: `H~2~O` H~2~O
 
 ---
 
-# Lists
+# Lists {.tabset}
 
 ## Ordered
 

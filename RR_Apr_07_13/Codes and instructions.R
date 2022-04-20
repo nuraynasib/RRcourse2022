@@ -2,7 +2,7 @@
 # Reproducible Research 2022
 # Wojciech Hardy & Lukasz Nawaro
 
-setwd("")
+setwd("C:/Users/Nuray/Desktop/rr/RRcourse2022/RR_Apr_07_13")
 
 # We need to load the necessary packages if we're operating through an R script.
 
@@ -21,6 +21,12 @@ render("RMD_class_1_cut.Rmd", clean = FALSE)   # tells knitr to keep the interme
 # See https://www.rdocumentation.org/packages/rmarkdown/versions/2.6/topics/render for more
 
 
+r <- "Asia"
+y <- 2017
+render("RMD_class_1_cut.Rmd", params = list(year = y,
+                                            region = r,
+                                            file = "file2.csv"),
+     output_file = paste0("Report_", y, "_", r, ".html"))
 #################
 
 
